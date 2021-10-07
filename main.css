@@ -1,0 +1,118 @@
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Source Sans Pro", sans-serif;
+    background-image: linear-gradient(to bottom right, #fff, #f7fdff);
+}
+
+main {
+    width: 90vw;
+    max-width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid blue; */
+}
+
+.joke-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 5rem;
+    padding: 2rem;
+    /* border: 1px solid red; */
+}
+
+.joke-img {
+    max-width: 350px;
+    height: auto;
+}
+
+.joke-img.anim-img {
+    animation: rolling 1050ms infinite normal linear forwards;
+}
+
+.joke-btn {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-family: inherit;
+    /* font-weight: 500; */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #162d50;
+    color: #fff;
+    padding: .75rem 2rem;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    margin: 3rem 0 4rem 0;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .25);
+    /* transition: all 150ms linear; */
+    /* outline: 1px solid lightskyblue; */
+    /* outline-offset: -5px; */
+}
+
+.joke-btn:hover {
+    background-color: #5f8dd3;
+    border: 2px solid #162d50;
+}
+
+.joke {
+    padding: 2rem;
+    color: #485a6d;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.form-group {
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+}
+
+.form-group label {
+    color: #485a6d;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.form-group select {
+    cursor: pointer;
+    border: 1px solid #485a6d;
+    width: 180px; 
+    font-size: 1rem;
+    padding: .25rem;
+    background-color: #f7fdff;
+    color: #162d50;
+}
+
+/* animation */
+@keyframes rolling {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+
+    45% {
+        opacity: .2;
+        transform: rotate(175deg) scale(.75);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+    }
+}
